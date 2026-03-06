@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tiendanube-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: node dist/api-server.js
+    envVars:
+      - key: PORT
+        value: 10000
+    plan: free
